@@ -21,6 +21,14 @@ class Dealership
     return @name
   end
 
+  def find_car_by_id(id)
+    @cars.each do |car|
+      if car.id == id
+        return car
+      end
+    end
+  end
+
   define_singleton_method(:add) do |dealership|
     @@dealerships << dealership
   end

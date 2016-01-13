@@ -1,5 +1,6 @@
 class Car
-  def initialize(make, model, year, color, miles)
+  def initialize(make, model, year, color, miles, id)
+    @id = id
     @make = make
     @model = model
     @year = year
@@ -37,5 +38,8 @@ class Car
     @miles
   end
 
+  def id
+    @id
+  end
 
 end

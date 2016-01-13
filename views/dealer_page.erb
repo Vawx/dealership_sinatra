@@ -1,7 +1,7 @@
 <h1>Dealer: <%= @dealer.name %></h1>
 <ul>
   <% @dealer.cars.each do |car| %>
-    <li><%= car.make %></li>
+    <li><a href="/car/<%= @dealer.name %>/<%= car.id %>"><%= car.make %></a></li>
   <% end %>
 </ul>
 <h3>Add a car</h3>
@@ -28,3 +28,5 @@
   </div>
   <button type="submit" name="add_car">Add Car</button>
 </form>
+
+<a href='/'>Home</a>
