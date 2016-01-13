@@ -16,4 +16,26 @@ class Car
     car_details.store("miles", @miles)
     return car_details
   end
+
+  def make
+    @make
+  end
+
+  def model
+    @model
+  end
+
+  def year
+    @year
+  end
+
+  def color
+    @color
+  end
+
+  def miles
+    @miles
+  end
+
+
 end

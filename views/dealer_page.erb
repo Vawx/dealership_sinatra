@@ -1,0 +1,30 @@
+<h1>Dealer: <%= @dealer.name %></h1>
+<ul>
+  <% @dealer.cars.each do |car| %>
+    <li><%= car.make %></li>
+  <% end %>
+</ul>
+<h3>Add a car</h3>
+<form action="/add_car/<%= @dealer.name %>" method="post">
+  <div>
+    <label>Make:</label>
+    <input type="text" name="make" placeholder="make">
+  </div>
+  <div>
+    <label>Model:</label>
+    <input type="text" name="model" placeholder="model">
+  </div>
+  <div>
+    <label>Color:</label>
+    <input type="text" name="color" placeholder="color">
+  </div>
+  <div>
+    <label>Year:</label>
+    <input type="text" name="year" placeholder="year">
+  </div>
+  <div>
+    <label>Mileage:</label>
+    <input type="text" name="miles" placeholder="miles">
+  </div>
+  <button type="submit" name="add_car">Add Car</button>
+</form>

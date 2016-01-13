@@ -1,0 +1,11 @@
+<h1>Dealerships</h1>
+<ul>
+  <% @dealerships.each do |dealer| %>
+    <li>
+      <a href="/dealer_page/<%= dealer.name %>"><%= dealer.name %></a>
+    </li>
+  <% end %>
+</ul>
+<form action="/add_dealership">
+  <button type="submit" name="to_dealership">Add Dealership</button>
+</form>

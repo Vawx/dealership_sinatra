@@ -1,3 +1,5 @@
+require 'pry'
+
 class Dealership
   @@dealerships = []
 
@@ -15,6 +17,10 @@ class Dealership
     return @cars
   end
 
+  def name
+    return @name
+  end
+
   define_singleton_method(:add) do |dealership|
     @@dealerships << dealership
   end
@@ -25,6 +31,15 @@ class Dealership
 
   define_singleton_method(:clear) do
     @@dealerships = []
+  end
+
+  define_singleton_method(:get_dealer_by_name) do |dealer_name|
+    @@dealerships.each do |dealer|
+      if dealer.name == dealer_name
+        return dealer
+      end
+    end
+    return "no dealer found"
   end
 
 end
