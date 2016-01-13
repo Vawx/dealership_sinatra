@@ -7,6 +7,14 @@ class Dealership
     @cars = []
   end
 
+  def add_car(car)
+    @cars << car
+  end
+
+  def cars
+    return @cars
+  end
+
   define_singleton_method(:add) do |dealership|
     @@dealerships << dealership
   end
@@ -18,4 +26,5 @@ class Dealership
   define_singleton_method(:clear) do
     @@dealerships = []
   end
+
 end
